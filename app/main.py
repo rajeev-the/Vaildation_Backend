@@ -4,6 +4,7 @@ from app.routers.upload import router as upload_router
 from app.routers.chunk import router as chunk_router
 from app.routers.validation_rule import router as rule_router
 from app.routers.report import router as report_router
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
