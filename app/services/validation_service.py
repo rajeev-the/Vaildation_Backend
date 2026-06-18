@@ -58,6 +58,7 @@ class ValidationService:
 
             valid_rows = 0
             error_rows = 0
+            total_rows = 0
 
             try:
                 # Download file content from S3
@@ -109,13 +110,14 @@ class ValidationService:
                         chunk_index=0,
                         row_index=row_index,
                         raw_data=row,
+                        
                         cleaned_data=row if status == "valid" else None,
                         validation_status=status,
                         validation_errors=errors,
                     )
 
                     db.add(validated_row)
-
+                    total_rows += 1
                     if status == "valid":
                         valid_rows += 1
                     else:
@@ -138,6 +140,7 @@ class ValidationService:
                 session.status = "validated"
                 session.valid_rows = valid_rows
                 session.error_rows = error_rows
+                session.total_rows = total_rows
                 await db.commit()
             except Exception:
                 logger.error("ValidationService: error finalizing session %s:\n%s", session_id, traceback.format_exc())
