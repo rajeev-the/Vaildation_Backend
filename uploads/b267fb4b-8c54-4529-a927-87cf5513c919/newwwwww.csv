@@ -1,0 +1,10 @@
+order_id,amount,order_date,phone,payment_mode,email
+ORD001,1500,16-04-2025,9.19877E+11,upi,test1@gmail.com
+ORD002,2500,16-04-2025,9.19877E+11,card,test2@gmail.com
+ORD003,3500,16-04-2025,9.19877E+11,cash,test3@gmail.com
+ORD004,abc,16-04-2025,9.19877E+11,upi,test4@gmail.com
+ORD005,4500,99/99/2025,9.19877E+11,upi,test5@gmail.com
+ORD006,5500,16-04-2025,12345,upi,test6@gmail.com
+ORD007,6500,16-04-2025,9.19877E+11,bitcoin,test7@gmail.com
+ORD008,7500,16-04-2025,9.19877E+11,upi,invalid-email
+ORD001,8500,16-04-2025,9.19877E+11,upi,test8@gmail.com

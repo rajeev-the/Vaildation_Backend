@@ -1,0 +1,27 @@
+fastapi
+uvicorn[standard]
+
+sqlalchemy
+asyncpg
+
+alembic
+
+python-multipart
+
+pandas
+openpyxl
+
+pydantic-settings
+
+python-dotenv
+
+aiofiles
+
+python-jose[cryptography]
+passlib[bcrypt]
+
+email-validator
+
+# AWS S3
+boto3
+aioboto3
